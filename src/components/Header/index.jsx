@@ -1,11 +1,22 @@
-import React from 'react'
+import React from "react";
+import logo from "../../assets/portfolio_logo.png";
+import "./style.css"
 
-const index = () => {
+const Header = () => {
   return (
-    <div>
-      <h1>HEllo</h1>
-    </div>
-  )
-}
+    <header className="header">
+      <div className="header_item">
+        <img className="header_logo_img" src={logo} alt="Logo" />
+        <ul className="header_links">  
+          <li className="header_link">Home</li>
+          <li className="header_link">About</li>
+          <li className="header_link">Project</li>
+          <li className="header_link">Skills</li>
+        </ul>
+        <button className="contact_button">Contact me</button>
+      </div>
+    </header>
+  );
+};
 
-export default index
+export default Header;
