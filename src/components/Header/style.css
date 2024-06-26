@@ -26,9 +26,7 @@
 .header_links {
   list-style: none;
   display: flex;
-  font-size: 299px;
   gap: 30px;
-  justify-content: center;
 }
 
 .header_link {
@@ -36,13 +34,26 @@
   font-size: 18px;
   font-weight: 500;
   color: #333;
-  font-size: 20px;
   text-decoration: none;
+  position: relative;
   transition: color 0.3s;
+}
+
+.header_link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #007bff;
+  transition: width 0.3s ease;
 }
 
 .header_link:hover {
   color: #007bff;
+}
+
+.header_link:hover::after {
+  width: 100%;
 }
 
 .contact_button {
